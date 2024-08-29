@@ -496,6 +496,9 @@ PODS:
     - React-jsi (= 0.72.12)
     - React-logger (= 0.72.12)
     - React-perflogger (= 0.72.12)
+  - RNGestureHandler (2.18.1):
+    - RCT-Folly (= 2021.07.22.00)
+    - React-Core
   - rnmapbox-maps (10.1.30):
     - MapboxMaps (~> 10.18.2)
     - React
@@ -507,6 +510,20 @@ PODS:
     - React
     - React-Core
     - Turf
+  - RNReanimated (3.15.1):
+    - RCT-Folly (= 2021.07.22.00)
+    - React-Core
+    - ReactCommon/turbomodule/core
+    - RNReanimated/reanimated (= 3.15.1)
+    - RNReanimated/worklets (= 3.15.1)
+  - RNReanimated/reanimated (3.15.1):
+    - RCT-Folly (= 2021.07.22.00)
+    - React-Core
+    - ReactCommon/turbomodule/core
+  - RNReanimated/worklets (3.15.1):
+    - RCT-Folly (= 2021.07.22.00)
+    - React-Core
+    - ReactCommon/turbomodule/core
   - RNScreens (3.34.0):
     - RCT-Folly (= 2021.07.22.00)
     - React-Core
@@ -581,7 +598,9 @@ DEPENDENCIES:
   - React-runtimescheduler (from `../node_modules/react-native/ReactCommon/react/renderer/runtimescheduler`)
   - React-utils (from `../node_modules/react-native/ReactCommon/react/utils`)
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
+  - RNGestureHandler (from `../node_modules/react-native-gesture-handler`)
   - "rnmapbox-maps (from `../node_modules/@rnmapbox/maps`)"
+  - RNReanimated (from `../node_modules/react-native-reanimated`)
   - RNScreens (from `../node_modules/react-native-screens`)
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
@@ -686,8 +705,12 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/react/utils"
   ReactCommon:
     :path: "../node_modules/react-native/ReactCommon"
+  RNGestureHandler:
+    :path: "../node_modules/react-native-gesture-handler"
   rnmapbox-maps:
     :path: "../node_modules/@rnmapbox/maps"
+  RNReanimated:
+    :path: "../node_modules/react-native-reanimated"
   RNScreens:
     :path: "../node_modules/react-native-screens"
   Yoga:
@@ -749,13 +772,15 @@ SPEC CHECKSUMS:
   React-runtimescheduler: 8aea338c561b2175f47018124c076d89d3808d30
   React-utils: 9a24cb88f950d1020ee55bddacbc8c16a611e2dc
   ReactCommon: 76843a9bb140596351ac2786257ac9fe60cafabb
+  RNGestureHandler: 9e0d0a46b7af6d21fbe3343912502afa8baf755e
   rnmapbox-maps: c5feb7232f1bfc4f16692dec48cc50311b235fe5
+  RNReanimated: 1896df448c213a64e98cf3f796e4105bbfab41a2
   RNScreens: 284fcee9d8d4648851fdb85dd0e200daebedcc14
   SocketRocket: f32cd54efbe0f095c4d7594881e52619cfe80b17
   Turf: aa2ede4298009639d10db36aba1a7ebaad072a5e
   Yoga: 87e59f6d458e5061d2421086c5de994b3f7cd151
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 
-PODFILE CHECKSUM: 449bc0b588ee60a91cd46117b92eea43ac3f21f3
+PODFILE CHECKSUM: 76136b92fcea9024f135fafe3adde2f44b6a70d3
 
 COCOAPODS: 1.14.3
