@@ -3,6 +3,8 @@ import {Text, View} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import { MapScreen } from "./src/Map/MapScreen";
+import Mapbox from "@rnmapbox/maps";
+import * as mapToken from './mapBox.json'
 
 function HomeScreen() {
   return (
@@ -21,6 +23,9 @@ function SettingsScreen() {
 }
 
 const Tab = createBottomTabNavigator();
+
+Mapbox.setAccessToken(mapToken.token);
+
 
 export default function App() {
   return (
