@@ -2,7 +2,8 @@ import React, { Component, useCallback, useRef } from "react";
 import { Button, StyleSheet, Text, View } from "react-native";
 import Mapbox, {MapView} from '@rnmapbox/maps';
 import BottomSheet, { BottomSheetView } from "@gorhom/bottom-sheet";
-
+import { useDispatch, useSelector } from 'react-redux';
+import { incremented, decremented } from '../../store';
 
 const styles = StyleSheet.create({
   page: {
@@ -33,6 +34,13 @@ export function MapScreen() {
   const handleClosePress = () => bottomSheetRef.current.close()
   const handleOpenPress = () => bottomSheetRef.current.expand()
 
+// Access counter value from Redux state
+  const count = useSelector((state) => state.counter.value);
+
+  // Get dispatch function from Redux
+  const dispatch = useDispatch();
+
+
   return (
     <View style={styles.page}>
       <View style={styles.container}>
@@ -49,6 +57,11 @@ export function MapScreen() {
                 alignItems: 'center',
               }}>
               <Text>Awesome 🎉</Text>
+              <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+                <Text>Count: {count}</Text>
+                <Button title="Increment" onPress={() => dispatch(incremented())} />
+                <Button title="Decrement" onPress={() => dispatch(decremented())} />
+              </View>
             </BottomSheetView>
           </BottomSheet>
         </MapView>
